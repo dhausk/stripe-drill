@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/accept-payment', (req, res) => {
-  const token = req.body.stripeToken
+  const token = req.body.stripeToken;
   const amount = req.body.amount;
 
   const charge = stripe.charges.create({
